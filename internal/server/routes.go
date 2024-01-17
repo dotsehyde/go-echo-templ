@@ -1,6 +1,7 @@
 package server
 
 import (
+	"got/internal/controller"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
@@ -13,7 +14,7 @@ func (s *Server) RegisterRoutes() http.Handler {
 	e.Use(middleware.Recover())
 
 	e.GET("/", s.HelloWorldHandler)
-
+	e.GET("/user", controller.UserController)
 	return e
 }
 

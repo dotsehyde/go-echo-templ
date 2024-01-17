@@ -1,0 +1,18 @@
+package layout
+
+
+templ Base(){
+	<html>
+		<head>
+			<title>Dashboard</title>
+		</head>
+		<body style="display:flex; width:100vw; height:100vh; margin:0;" >
+				<aside style="width:30%;  background:teal;   border: 1px solid;">
+				Sidebar
+				</aside>
+				<main>
+				{children...}
+				</main>
+			</body>
+	</html>
+}
